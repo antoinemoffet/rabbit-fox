@@ -52,5 +52,6 @@ public class rabbit extends Actor
     public void act() 
     {
         // Add your action code here.
+        move(smallJump);
     }    
 }
