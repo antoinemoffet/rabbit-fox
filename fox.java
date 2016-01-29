@@ -42,7 +42,7 @@ public class fox extends Actor
 
     private boolean running=false;
     private boolean inRestMode=false; // set to true any time a fox exits running mode
-    private int restTime=100; // act cycles that a fox must rest after running
+    private int restTime=3; // act cycles that a fox must rest after running
     private int foxSpeed=5;  //  this can be 5 to 25. 
                              //  when resting, must be 5, when running
                              //  can be up to 25.
@@ -58,5 +58,15 @@ public class fox extends Actor
     public void act() 
     {
         // Add your action code here.
+        if (Greenfoot.isKeyDown("r")){
+            move(runCycle);
+        }
+         if (Greenfoot.isKeyDown("t")){
+            turn(turnAmount);
+        }
+         if (Greenfoot.isKeyDown("s")){
+            move(restTime);
+        }
+           
     }    
 }
